@@ -86,86 +86,101 @@
     Сделано с помощью ChatGPT · Информация может быть неточной
   </footer>
 
-  <script>
-    const times = ['12:40 13:20','13:40 14:20','14:40 15:20','15:40 16:20','16:30 17:10','17:20 18:00','18:10 18:50'];
+<script>
+  const times = ['12:40 13:20','13:40 14:20','14:40 15:20','15:40 16:20','16:30 17:10','17:20 18:00','18:10 18:50'];
 
-    const data = {
-      'Понедельник': [
-        { lesson: 'Вероятность и статистика', room: '45', teacher: 'Виктория Анатольевна', hw: '' },
-        { lesson: 'Английский язык', room: '14/41', teacher: 'Анастасия Дмитриевна/Алёна Сергеевна', hw: '' },
-        { lesson: 'Разговоры о важном', room: '206', teacher: 'Екатерина Евгеньевна', hw: '' },
-        { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
-        { lesson: 'Английский язык', room: '23/43', teacher: 'Анастасия Дмитриевна/Алёна Сергеевна', hw: '' },
-        { lesson: 'Геометрия', room: '45', teacher: 'Виктория Анатольевна', hw: '' },
-        { lesson: 'География', room:'18', teacher: 'Мария Егорьевна', hw: 'Подготовиться к пр/раб по теме "климат"' }
-      ],
-      'Вторник': [
-        { lesson: '', room: '', teacher: '', hw: '' },
-        { lesson: '', room: '', teacher: '', hw: '' },
-        { lesson: 'История', room: '47', teacher: 'Евгения Николаевна', hw: 'Параграф 12 "работаем с источником" ответить на вопросы' },
-        { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
-        { lesson: 'Алгебра', room: '27', teacher: 'Людмила Игоревна', hw: '' },
-        { lesson: 'Физика',room: '203', teacher: 'Татьяна Владимировна', hw: '' },
-        { lesson: 'Общество',room: '47', teacher: 'Ирина Александровна', hw: 'Файл' },
-        { lesson: 'Коми', room: '11', teacher: 'Любовь Владимировна', hw: '' },
-        { lesson: 'Россия мои горизонты', room: '206', teacher: 'Екатерина Евгеньевна', hw: '' },
-      ],
-      'Среда': [
-        { lesson: '-', room: '-', teacher: '-', hw: '-' },
-        { lesson: '-', room: '-', teacher: '-', hw: '' },
-        { lesson: 'Геометрия', room: '45', teacher: 'Виктория Анатольевна', hw: '' },
-        { lesson: 'География', room: '18', teacher: 'Мария Егорьевна', hw: '' },
-        { lesson: 'Информатика(гр1)/Английский язык', room: '48/11', teacher: 'Татьяна Владимировна/Анастасия Дмитриевна', hw: 'подготовиться к кр' },
-        { lesson: 'Информатика(гр2)/Английский язык', room: '48/43', teacher: 'Татьяна Владимировна/Алёна Сергеевна', hw: '' },
-        { lesson: 'Музыка', room: '14', teacher: 'Полина Павловна', hw: 'Подготовить соо на тему любого народного праздника.выучить 1 куплет песни' },
-        { lesson: 'Физическая культура', room: 'Спортзал', teacher: 'Татьяна Игоревна', hw: '' },
-        { lesson: 'История', room: '23', teacher: 'Евгения Николаевна', hw: '' }
-      ],
-      'Четверг': [
-        { lesson: '-', room: '-', teacher: '-', hw: '-' },
-        { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
-        { lesson: 'ИЗО', room: '13', teacher: 'Полина Владимировна', hw: '' },
-        { lesson: 'История', room: '14', teacher: 'Евгения Николаевна', hw: '' },
-        { lesson: 'Биология', room: '206', teacher: 'Екатерина Евгеньевна', hw: 'Учить записи в тетради,знать строение папоротника,устный опрос' },
-        { lesson: 'Физическая культура', room: 'Спортзал', teacher: 'Татьяна Игоревна', hw: '' },
-        { lesson: 'Литература', room: '210', teacher: 'Татьяна Андреевна', hw: '' },
-        
-      ],
-      'Пятница': [
-         { lesson: '-', room: '-', teacher: '-', hw: '' },
-        { lesson: '-', room: '-', teacher: '-', hw: '' },
-        { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
-        { lesson: 'Алгебра', room: '27', teacher: 'Людмила Игоревна', hw: '' },
-        { lesson: 'Алгебра', room: '27', teacher: 'Людмила Игоревна', hw: '' },
-        { lesson: 'Физика', room: '203', teacher: 'Татьяна Владимировна', hw: '' },
-        { lesson: 'Литература', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
-        { lesson: 'Труд', room: '16/20', teacher: 'Анастасия Александровна/', hw: '' },
-        { lesson: 'Труд', room: '16/20', teacher: 'Анастасия Александровна/', hw: '' }
-      ]
-    };
+  const data = {
+    'Понедельник': [
+      { lesson: 'Вероятность и статистика', room: '45', teacher: 'Виктория Анатольевна', hw: '' },
+      { lesson: 'Английский язык', room: '14/41', teacher: 'Анастасия Дмитриевна/Алёна Сергеевна', hw: '' },
+      { lesson: 'Разговоры о важном', room: '206', teacher: 'Екатерина Евгеньевна', hw: '' },
+      { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
+      { lesson: 'Английский язык', room: '23/43', teacher: 'Анастасия Дмитриевна/Алёна Сергеевна', hw: '' },
+      { lesson: 'Геометрия', room: '45', teacher: 'Виктория Анатольевна', hw: '' },
+      { lesson: 'География', room:'18', teacher: 'Мария Егорьевна', hw: 'Подготовиться к пр/раб по теме "климат"' }
+    ],
+    'Вторник': [
+      { lesson: '', room: '', teacher: '', hw: '' },
+      { lesson: '', room: '', teacher: '', hw: '' },
+      { lesson: 'История', room: '47', teacher: 'Евгения Николаевна', hw: 'Параграф 12 "работаем с источником" ответить на вопросы' },
+      { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
+      { lesson: 'Алгебра', room: '27', teacher: 'Людмила Игоревна', hw: '' },
+      { lesson: 'Физика',room: '203', teacher: 'Татьяна Владимировна', hw: '' },
+      { lesson: 'Общество',room: '47', teacher: 'Ирина Александровна', hw: 'Файл' },
+      { lesson: 'Коми', room: '11', teacher: 'Любовь Владимировна', hw: '' },
+      { lesson: 'Россия мои горизонты', room: '206', teacher: 'Екатерина Евгеньевна', hw: '' }
+    ],
+    'Среда': [
+      { lesson: '-', room: '-', teacher: '-', hw: '-' },
+      { lesson: '-', room: '-', teacher: '-', hw: '' },
+      { lesson: 'Геометрия', room: '45', teacher: 'Виктория Анатольевна', hw: '' },
+      { lesson: 'География', room: '18', teacher: 'Мария Егорьевна', hw: '' },
+      { lesson: 'Информатика(гр1)/Английский язык', room: '48/11', teacher: 'Татьяна Владимировна/Анастасия Дмитриевна', hw: 'подготовиться к кр' },
+      { lesson: 'Информатика(гр2)/Английский язык', room: '48/43', teacher: 'Татьяна Владимировна/Алёна Сергеевна', hw: '' },
+      { lesson: 'Музыка', room: '14', teacher: 'Полина Павловна', hw: 'Подготовить соо на тему любого народного праздника.выучить 1 куплет песни' },
+      { lesson: 'Физическая культура', room: 'Спортзал', teacher: 'Татьяна Игоревна', hw: '' },
+      { lesson: 'История', room: '23', teacher: 'Евгения Николаевна', hw: '' }
+    ],
+    'Четверг': [
+      { lesson: '-', room: '-', teacher: '-', hw: '-' },
+      { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
+      { lesson: 'ИЗО', room: '13', teacher: 'Полина Владимировна', hw: '' },
+      { lesson: 'История', room: '14', teacher: 'Евгения Николаевна', hw: '' },
+      { lesson: 'Биология', room: '206', teacher: 'Екатерина Евгеньевна', hw: 'Учить записи в тетради,знать строение папоротника,устный опрос' },
+      { lesson: 'Физическая культура', room: 'Спортзал', teacher: 'Татьяна Игоревна', hw: '' },
+      { lesson: 'Литература', room: '210', teacher: 'Татьяна Андреевна', hw: '' }
+    ],
+    'Пятница': [
+      { lesson: '-', room: '-', teacher: '-', hw: '' },
+      { lesson: '-', room: '-', teacher: '-', hw: '' },
+      { lesson: 'Русский язык', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
+      { lesson: 'Алгебра', room: '27', teacher: 'Людмила Игоревна', hw: '' },
+      { lesson: 'Алгебра', room: '27', teacher: 'Людмила Игоревна', hw: '' },
+      { lesson: 'Физика', room: '203', teacher: 'Татьяна Владимировна', hw: '' },
+      { lesson: 'Литература', room: '44', teacher: 'Татьяна Андреевна', hw: '' },
+      { lesson: 'Труд', room: '16/20', teacher: 'Анастасия Александровна', hw: '' },
+      { lesson: 'Труд', room: '16/20', teacher: 'Анастасия Александровна', hw: '' }
+    ]
+  };
 
+  const tbody = document.getElementById('schedule-body');
+  const dayButtons = document.querySelectorAll('#daySelector button');
 
+  function renderDay(day) {
+    dayButtons.forEach(b => b.classList.toggle('active', b.dataset.day === day));
+    tbody.innerHTML = '';
 
-    const tbody = document.getElementById('schedule-body');
-    const dayButtons = document.querySelectorAll('#daySelector button');
+    const lessons = data[day] || [];
+    const maxLen = Math.max(7, lessons.length);
 
-    function renderDay(day){
-      dayButtons.forEach(b=>b.classList.toggle('active', b.dataset.day===day));
-      tbody.innerHTML = '';
-      for(let i=0;i<7;i++){
-        const rowData = (data[day] && data[day][i]) || {lesson:'—',room:'—',teacher:'—',hw:''};
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td class="time">${times[i]}</td><td class="lesson">${escapeHtml(rowData.lesson)}</td><td class="room">${escapeHtml(rowData.room)}</td><td class="teacher">${escapeHtml(rowData.teacher)}</td><td class="hw">${escapeHtml(rowData.hw || 'Нет ДЗ')}</td>`;
-        tbody.appendChild(tr);
-      }
+    for (let i = 0; i < maxLen; i++) {
+      const row = lessons[i] || { lesson:'—', room:'—', teacher:'—', hw:'' };
+      const time = times[i] || '';
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="time">${time}</td>
+        <td class="lesson">${escapeHtml(row.lesson)}</td>
+        <td class="room">${escapeHtml(row.room)}</td>
+        <td class="teacher">${escapeHtml(row.teacher)}</td>
+        <td class="hw">${escapeHtml(row.hw || 'Нет ДЗ')}</td>
+      `;
+      tbody.appendChild(tr);
     }
+  }
 
-    function escapeHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+  function escapeHtml(s){
+    return String(s)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;');
+  }
 
-    dayButtons.forEach(btn=>btn.addEventListener('click',()=>renderDay(btn.dataset.day)));
+  dayButtons.forEach(btn => btn.addEventListener('click', () => renderDay(btn.dataset.day)));
 
-    renderDay('Понедельник');
-  </script>
+  renderDay('Понедельник');
+</script>
+
 </body>
 </html>
 
